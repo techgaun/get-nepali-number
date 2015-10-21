@@ -1,6 +1,6 @@
 # get-nepali-number [![Build Status](https://travis-ci.org/techgaun/get-nepali-number.svg?branch=master)](https://travis-ci.org/techgaun/get-nepali-number)
 
-> Convert any english numeral to Nepali number
+> Convert any english (technically hindu-arabic) numeral to Nepali number
 
 
 ## Install
