@@ -1,4 +1,6 @@
 'use strict';
+var Intl = require('intl');
+
 var nums = {
   0: '०',
   1: '१',
@@ -13,6 +15,11 @@ var nums = {
 };
 
 module.exports = function (strNum) {
+  // remove comma if any
+  strNum = strNum.toString().search(',') ? strNum.toString().split(',').join('') : strNum;
+  // format number
+  strNum = new Intl.NumberFormat('en-IN').format(strNum);
+
   var arrNumNe = strNum.toString().split('').map(function (ch) {
     if (ch === '.' || ch === ',') {
       return ch;

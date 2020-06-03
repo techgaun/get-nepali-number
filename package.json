@@ -29,7 +29,9 @@
     "hindu-arabic",
     "arabic"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "intl": "^1.2.5"
+  },
   "devDependencies": {
     "mocha": "^2.2.5",
     "xo": "^0.9.0"
