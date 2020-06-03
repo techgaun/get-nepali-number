@@ -6,7 +6,11 @@
 ## Install
 
 ```
+# Using npm
 $ npm install --save get-nepali-number
+
+# Using yarn
+$ yarn add get-nepali-number
 ```
 
 
