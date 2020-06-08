@@ -16,7 +16,7 @@ var nums = {
 
 module.exports = function (strNum) {
   // remove comma if any
-  strNum = strNum.toString().search(',') ? strNum.toString().split(',').join('') : strNum;
+  strNum = strNum.toString().replace(/,/g, '');
   // format number
   strNum = new Intl.NumberFormat('en-IN').format(strNum);
 
