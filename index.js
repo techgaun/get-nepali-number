@@ -1,5 +1,4 @@
 'use strict';
-var Intl = require('intl');
 
 var nums = {
   0: '०',
