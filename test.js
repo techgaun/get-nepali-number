@@ -10,6 +10,12 @@ it('should convert numbers with decimal correctly', function () {
   assert.strictEqual(getNepaliNumber(200.05), '२००.०५');
 });
 
-it('should convert number with comma and decimal point correctly', function () {
-  assert.strictEqual(getNepaliNumber('1,000,365.50'), '१,०००,३६५.५०');
+it('should format numbers using thousands/lakh/crore separators correctly', function () {
+  assert.strictEqual(getNepaliNumber(2000), '२,०००');
+  assert.strictEqual(getNepaliNumber(2000.50), '२,०००.५');
+});
+
+it('should format number with comma and decimal point using thousands/lakh/crore separators correctly', function () {
+  assert.strictEqual(getNepaliNumber('2,00,000.50'), '२,००,०००.५');
+  assert.strictEqual(getNepaliNumber('1,000,365.50'), '१०,००,३६५.५');
 });

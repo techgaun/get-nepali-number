@@ -6,7 +6,11 @@
 ## Install
 
 ```
+# Using npm
 $ npm install --save get-nepali-number
+
+# Using yarn
+$ yarn add get-nepali-number
 ```
 
 
@@ -15,14 +19,23 @@ $ npm install --save get-nepali-number
 ```js
 var getNepaliNumber = require('get-nepali-number');
 
-getNepaliNumber('100');
+getNepaliNumber(100);
 //=> '१००'
 
-getNepaliNumber('200.05');
+getNepaliNumber(2000);
+//=> '२,०००'
+
+getNepaliNumber(200.05);
 //=> '२००.०५'
 
+getNepaliNumber(2000.50);
+//=> '२,०००.५'
+
+getNepaliNumber('2,00,000.50');
+//=> '२,००,०००.५'
+
 getNepaliNumber('1,000,365.50');
-//=> '१,०००,३६५.५०'
+//=> '१०,००,३६५.५'
 ```
 
 

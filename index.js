@@ -1,4 +1,5 @@
 'use strict';
+
 var nums = {
   0: '०',
   1: '१',
@@ -13,6 +14,11 @@ var nums = {
 };
 
 module.exports = function (strNum) {
+  // remove comma if any
+  strNum = strNum.toString().replace(/,/g, '');
+  // format number
+  strNum = new Intl.NumberFormat('en-IN').format(strNum);
+
   var arrNumNe = strNum.toString().split('').map(function (ch) {
     if (ch === '.' || ch === ',') {
       return ch;
