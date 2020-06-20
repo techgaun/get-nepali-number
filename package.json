@@ -1,13 +1,13 @@
 {
   "name": "get-nepali-number",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Convert any english numeral to Nepali number",
   "license": "MIT",
-  "repository": "techgaun/get-nepali-number",
+  "repository": "https://github.com/techgaun/get-nepali-number",
   "author": {
     "name": "techgaun",
     "email": "coolsamar207@gmail.com",
-    "url": "samar.techgaun.com"
+    "url": "https://techgaun.com"
   },
   "engines": {
     "node": ">=0.10.0"
