@@ -1,6 +1,6 @@
 'use strict';
 
-var nums = {
+const nums = {
   0: '०',
   1: '१',
   2: '२',
@@ -13,17 +13,18 @@ var nums = {
   9: '९'
 };
 
-module.exports = function (strNum) {
-  // remove comma if any
-  strNum = strNum.toString().replace(/,/g, '');
-  // format number
-  strNum = new Intl.NumberFormat('en-IN').format(strNum);
+module.exports = function (stringNumber) {
+  // Remove comma if any
+  stringNumber = stringNumber.toString().replace(/,/g, '');
+  // Format number
+  stringNumber = new Intl.NumberFormat('en-IN').format(stringNumber);
 
-  var arrNumNe = strNum.toString().split('').map(function (ch) {
+  const arrayNumberNe = stringNumber.toString().split('').map(ch => {
     if (ch === '.' || ch === ',') {
       return ch;
     }
+
     return nums[Number(ch)];
   });
-  return arrNumNe.join('');
+  return arrayNumberNe.join('');
 };
