@@ -10,7 +10,7 @@
     "url": "https://techgaun.com"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -55,13 +55,16 @@
     "arabic"
   ],
   "devDependencies": {
-    "@eslint/js": "^9.39.5",
-    "@types/node": "^22.0.0",
-    "eslint": "^9.39.5",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.6",
+    "eslint": "^10.14.0",
     "prettier": "^3.10.0",
-    "tsup": "^8.5.1",
-    "typescript": "^5.9.3",
+    "tsup": "^9.0.0",
+    "typescript": "^6.0.3",
     "typescript-eslint": "^8.72.2",
-    "vitest": "^3.2.7"
+    "vitest": "^5.1.0"
+  },
+  "overrides": {
+    "minimatch": "^11.0.8"
   }
 }

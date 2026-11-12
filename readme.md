@@ -5,7 +5,7 @@
 
 > Convert any english (technically Hindu-Arabic) numeral to a Nepali (Devanagari) numeral, grouped the Nepali way (Lakh/Crore).
 
-- Zero dependencies, no `Intl`/ICU needed, works in Node (>= 18) and every browser.
+- Zero dependencies, no `Intl`/ICU needed, works in Node (>= 22) and every browser.
 - Ships ESM, CommonJS and TypeScript declarations.
 - Keeps the sign of negative numbers, handles `bigint` and arbitrarily long numeric strings.
 
@@ -126,6 +126,13 @@ import getNepaliNumber, { type GetNepaliNumberOptions } from 'get-nepali-number'
 const options: GetNepaliNumberOptions = { grouping: false };
 const price: string = getNepaliNumber(1999.99, options);
 ```
+
+## Supported Node.js versions
+
+The package requires Node.js 22 or newer (`engines.node >= 22`) and is tested on
+Node 22, 24 and 26 in CI. The published code is plain ES2020 with no runtime
+dependencies, so it also runs in any evergreen browser. An `.nvmrc` pins the
+development version to 26.
 
 ## Development
 

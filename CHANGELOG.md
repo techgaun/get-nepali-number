@@ -39,13 +39,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `Infinity`, empty or whitespace-only strings, non-numeric strings such as `'abc'` or `'1e5'`,
   and non-number/string/bigint values such as `null` or `undefined`. Previously these silently
   returned `''` or `'०'` (or threw an unrelated error for `null`/`undefined`).
-- Minimum supported Node.js version is now 18.
+- Minimum supported Node.js version is now 22 (`engines.node >= 22`). CI runs on Node 22, 24
+  and 26, and `.nvmrc` pins development to Node 26. Nothing in the published code depends on the
+  Node version; this only reflects the maintenance policy and the tooling (tsup 9, vitest 5,
+  eslint 10, TypeScript 6).
 - The published package contains `dist/` instead of a root `index.js`.
 
 ### Removed
 
 - `full-icu` dev dependency (modern Node ships full ICU and the library no longer needs it).
-- Travis CI configuration, replaced by GitHub Actions running on Node 18, 20 and 22.
+- Travis CI configuration, replaced by GitHub Actions running on Node 22, 24 and 26.
 - `xo` and `mocha`, replaced by `typescript-eslint` + `prettier` and `vitest`.
 
 ## [0.2.0] and earlier
